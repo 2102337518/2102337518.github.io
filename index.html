@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>林镇标 Zhenbiao Lin — 个人主页 | Personal Homepage</title>
+  <meta name="description" content="林镇标（Zhenbiao Lin）的个人主页：机器人算法工程师，展示四足/轮足/人形机器人等项目的成果、经历与荣誉。Personal homepage of Zhenbiao Lin, robotics algorithm engineer — projects, experience, and honors.">
+  <meta property="og:title" content="林镇标 Zhenbiao Lin — 个人主页 | Personal Homepage">
+  <meta property="og:description" content="机器人算法工程师的个人主页：项目成果、经历与荣誉。Projects, experience, and honors.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <!-- 提前应用主题，避免深色模式用户每次打开先白屏一闪（localStorage 访问做异常保护） -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('site-theme');
+        if (t !== 'dark' && t !== 'light') {
+          t = (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+  <!--
+    提示：Google Fonts 在国内部分地区加载较慢或被墙。
+    字体采用异步加载，不阻塞页面渲染；如果一直加载不出来，网站会自动回退到系统中文字体。
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-brand" href="#top" id="site-brand">Zhenbiao Lin</a>
+      <div class="header-controls">
+        <button id="lang-btn" class="control-btn" type="button" aria-label="Switch language / 切换语言">中文</button>
+        <button id="theme-btn" class="control-btn" type="button" aria-label="切换深浅色 / Toggle dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <noscript>
+      <p class="noscript-note">
+        此页面需要启用 JavaScript 才能显示内容。<br>
+        This page requires JavaScript to display its content.
+      </p>
+    </noscript>
+    <div id="app">
+      <p class="boot-msg">Loading… 加载中…</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p id="footer-copy"></p>
+      <p class="footer-note">
+        <span data-lang="zh">由 <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a> 提供托管</span><span data-lang="en">Hosted on <a href="https://pages.github.com" target="_blank" rel="noopener">GitHub Pages</a></span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
