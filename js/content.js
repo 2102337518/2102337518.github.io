@@ -116,16 +116,6 @@ window.SITE_DATA = {
       }
     },
     {
-      title: { zh: "无人机自主穿圈飞行", en: "Autonomous Drone Gate-Flying" },
-      img: "assets/img/projects/drone.jpg",
-      video: "assets/videos/drone.mp4",
-      tags: ["UAV", "VINS-Fusion", "Ego-Planner", "LQR"],
-      desc: {
-        zh: "大疆 RoboMaster“智在飞翔”竞赛项目：完成 Jetson ORIN NX 嵌入式软硬件开发，在 ARM 架构下部署 VINS-Fusion 定位与 Ego-Planner 规划；基于微分平坦理论实现 SE(3) 全姿态控制，前馈+PD 内环结合 LQR 完成轨迹跟踪；并实现基于高斯过程数据驱动的模型预测控制（MPC）与干扰观测器（ESO）系统，在复杂环境下完成自主穿圈飞行，获综合赛二等奖。",
-        en: "DJI RoboMaster \"ZhiZai FeiXiang\" competition: embedded development on Jetson ORIN NX, deploying VINS-Fusion and Ego-Planner on ARM; SE(3) full-attitude control via differential flatness with feedforward+PD inner loops and LQR trajectory tracking; plus Gaussian-process data-driven model predictive control (MPC) with an extended state observer (ESO). Won Second Prize in the integrated challenge."
-      }
-    },
-    {
       title: { zh: "车载自动驾驶正向开发（A-SPICE）", en: "Automotive Forward Development (A-SPICE)" },
       img: "assets/img/projects/dji.jpg",
       diagram: "assets/img/projects/diagram-aspice.png",
@@ -136,15 +126,6 @@ window.SITE_DATA = {
         en: "DJI Automotive internship: A-SPICE forward development including static code checks, Coverity remediation, Cantata unit tests, and gdb integration debugging; AUTOSAR embedded development and CAN communication validation; vehicle actuator characterization and open-loop acceptance."
       }
     },
-    {
-      title: { zh: "全向移动视觉机械臂复合机器人 AMR", en: "Omnidirectional Vision-Guided Manipulator AMR" },
-      img: "assets/img/projects/midea-amr.jpg",
-      tags: ["ROS", "Manipulator", "B-spline", "PID"],
-      desc: {
-        zh: "在美的中央研究院负责 UR5 视觉机械臂复合机器人：正逆运动学解算与规划控制、三次 B 样条局部路径规划；采用速度环、位置环串级 PID 跟踪控制，实现“边夹取边移动”的协同控制。",
-        en: "At Midea CRC, developed a UR5 vision-manipulator AMR: forward/inverse kinematics, cubic B-spline local path planning, and cascaded velocity/position PID for simultaneous pick-and-move coordination."
-      }
-    }
   ],
 
   /* ================= 竞赛（与项目区分，单独展示） ================= */
@@ -162,11 +143,13 @@ window.SITE_DATA = {
     },
     {
       year: "2023",
-      title: { zh: "全国大学生机器人大赛 RoboMaster", en: "RoboMaster National College Robot Competition" },
-      tags: ["Robotics", "Embedded", "Competition"],
+      title: { zh: "大疆 RoboMaster 智在飞翔无人机竞赛", en: "DJI RoboMaster ZhiZai FeiXiang Drone Competition" },
+      img: "assets/img/projects/drone.jpg",
+      video: "assets/videos/robomaster.mp4",
+      tags: ["UAV", "VINS-Fusion", "Ego-Planner", "MPC"],
       desc: {
-        zh: "RoboMaster 机甲大师机器人对抗赛，获全国二等奖。",
-        en: "RoboMaster robot combat competition; won Second Prize nationally."
+        zh: "完成 Jetson ORIN NX 下定位算法 VINS-Fusion、规划算法 Ego-Planner 部署；完成无人机姿态估计器、姿态控制器（串级 PID）参数整定；LQR 控制器实机部署并对轨迹跟踪控制器整定；实现基于高斯过程数据驱动的模型预测控制（MPC）与基于干扰观测器（ESO）的 MPC 系统，获综合赛二等奖。",
+        en: "Deployed VINS-Fusion localization and Ego-Planner planning on Jetson ORIN NX; tuned the attitude estimator and cascaded-PID attitude controller; deployed the LQR controller on hardware and tuned the trajectory tracker; implemented Gaussian-process data-driven MPC and an ESO-based MPC system. Won Second Prize."
       }
     }
   ],
