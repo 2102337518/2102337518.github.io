@@ -95,7 +95,8 @@ window.SITE_DATA = {
     },
     {
       title: { zh: "人形机器人遥操作与步态优化", en: "Humanoid Robot Teleoperation & Gait Optimization" },
-      img: "assets/img/projects/project3.svg",
+      img: "assets/img/projects/humanoid-xpeng.jpg",
+      video: "assets/videos/xpeng.mp4",
       tags: ["Humanoid", "MuJoCo", "Teleoperation", "Gait Planning"],
       desc: {
         zh: "在小鹏汽车独立负责 VR 遥操作控制 PX5 人形机器人行走：通讯系统方案设计、MuJoCo 仿真验证、系统状态机与实机调试；基于贝塞尔曲线完成步态规划与 smart gait 模式切换，实现直膝行走实机调优，并完成电机执行器性能摸底与 PVT 控制器参数整定。技术栈：WBC、IQP、LQR、MPC、C/C++，实习绩效考评优秀。",
@@ -104,7 +105,8 @@ window.SITE_DATA = {
     },
     {
       title: { zh: "无人机自主穿圈飞行", en: "Autonomous Drone Gate-Flying" },
-      img: "assets/img/projects/project4.svg",
+      img: "assets/img/projects/drone.jpg",
+      video: "assets/videos/drone.mp4",
       tags: ["UAV", "VINS-Fusion", "Ego-Planner", "LQR"],
       desc: {
         zh: "大疆 RoboMaster“智在飞翔”竞赛项目：完成 Jetson ORIN NX 嵌入式软硬件开发，在 ARM 架构下部署 VINS-Fusion 定位与 Ego-Planner 规划；基于微分平坦理论实现 SE(3) 全姿态控制，前馈+PD 内环结合 LQR 完成轨迹跟踪；并实现基于高斯过程数据驱动的模型预测控制（MPC）与干扰观测器（ESO）系统，在复杂环境下完成自主穿圈飞行，获综合赛二等奖。",
