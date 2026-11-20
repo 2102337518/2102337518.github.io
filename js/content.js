@@ -64,7 +64,7 @@ window.SITE_DATA = {
     {
       title: { zh: "基于注意力机制的感知运控四足机器人", en: "Attention-based Perceptive Locomotion for Quadruped Robots" },
       img: "assets/img/projects/project1.jpg",
-      diagram: "assets/img/projects/diagram-attention.png",
+      diagram: "assets/img/projects/diagram-heightmap.png",
       video: "assets/videos/quadruped.mp4",
       tags: ["Reinforcement Learning", "Attention", "GRU", "Unitree GO2"],
       desc: {
@@ -98,8 +98,8 @@ window.SITE_DATA = {
       img: "assets/img/projects/project3.svg",
       tags: ["Humanoid", "MuJoCo", "Teleoperation", "Gait Planning"],
       desc: {
-        zh: "在小鹏汽车独立负责 VR 遥操作控制 PX5 人形机器人行走：通讯系统方案设计、MuJoCo 仿真验证、系统状态机与实机调试；基于贝塞尔曲线完成步态规划与 smart gait 模式切换，实现直膝行走实机调优，并完成电机执行器性能摸底与 PVT 控制器参数整定。",
-        en: "At XPeng, independently led VR teleoperation of the PX5 humanoid: communication architecture, MuJoCo simulation, state machine, and hardware tuning. Planned gaits with Bézier curves, implemented smart-gait switching and straight-knee walking, and performed motor-actuator characterization with PVT controller tuning."
+        zh: "在小鹏汽车独立负责 VR 遥操作控制 PX5 人形机器人行走：通讯系统方案设计、MuJoCo 仿真验证、系统状态机与实机调试；基于贝塞尔曲线完成步态规划与 smart gait 模式切换，实现直膝行走实机调优，并完成电机执行器性能摸底与 PVT 控制器参数整定。技术栈：WBC、IQP、LQR、MPC、C/C++，实习绩效考评优秀。",
+        en: "At XPeng, independently led VR teleoperation of the PX5 humanoid: communication architecture, MuJoCo simulation, state machine, and hardware tuning. Planned gaits with Bézier curves, implemented smart-gait switching and straight-knee walking, and performed motor-actuator characterization with PVT controller tuning. Stack: WBC, IQP, LQR, MPC, C/C++; rated \"excellent\" in the internship performance review."
       }
     },
     {
@@ -107,8 +107,8 @@ window.SITE_DATA = {
       img: "assets/img/projects/project4.svg",
       tags: ["UAV", "VINS-Fusion", "Ego-Planner", "LQR"],
       desc: {
-        zh: "大疆 RoboMaster“智在飞翔”竞赛项目：完成 Jetson ORIN NX 嵌入式软硬件开发，在 ARM 架构下部署 VINS-Fusion 定位与 Ego-Planner 规划；基于微分平坦理论实现 SE(3) 全姿态控制，前馈+PD 内环结合 LQR 完成轨迹跟踪，实现复杂环境自主穿圈飞行，获综合赛二等奖。",
-        en: "DJI RoboMaster \"ZhiZai FeiXiang\" competition: embedded development on Jetson ORIN NX, deploying VINS-Fusion and Ego-Planner on ARM; SE(3) full-attitude control via differential flatness with feedforward+PD inner loops and LQR trajectory tracking. Won Second Prize in the integrated challenge."
+        zh: "大疆 RoboMaster“智在飞翔”竞赛项目：完成 Jetson ORIN NX 嵌入式软硬件开发，在 ARM 架构下部署 VINS-Fusion 定位与 Ego-Planner 规划；基于微分平坦理论实现 SE(3) 全姿态控制，前馈+PD 内环结合 LQR 完成轨迹跟踪；并实现基于高斯过程数据驱动的模型预测控制（MPC）与干扰观测器（ESO）系统，在复杂环境下完成自主穿圈飞行，获综合赛二等奖。",
+        en: "DJI RoboMaster \"ZhiZai FeiXiang\" competition: embedded development on Jetson ORIN NX, deploying VINS-Fusion and Ego-Planner on ARM; SE(3) full-attitude control via differential flatness with feedforward+PD inner loops and LQR trajectory tracking; plus Gaussian-process data-driven model predictive control (MPC) with an extended state observer (ESO). Won Second Prize in the integrated challenge."
       }
     },
     {
