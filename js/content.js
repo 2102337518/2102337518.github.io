@@ -87,11 +87,22 @@ window.SITE_DATA = {
     {
       title: { zh: "自研人形机器人走跑一体运控", en: "In-house Humanoid Walk-Run Locomotion Control" },
       img: "assets/img/projects/humanoid.jpg",
+      diagram: "assets/img/projects/diagram-humanoid.svg",
       video: "assets/videos/humanoid.mp4",
       tags: ["Humanoid", "23-DOF", "PPO", "Isaac Lab", "Locomotion"],
       desc: {
         zh: "在 Isaac Lab/Gym 中基于 PPO 分别训练 23DOF 人形机器人的行走与跑步策略，实现走跑一体的连续切换与全向运动；训练中引入腰部运动幅度惩罚并调整原地旋转奖励，完成真机部署验证。",
         en: "Trained 23-DOF humanoid walking and running policies with PPO in Isaac Lab/Gym, enabling smooth walk-run transitions and omnidirectional locomotion; introduced waist-motion-amplitude penalties and tuned in-place rotation rewards, with real-robot deployment."
+      }
+    },
+    {
+      title: { zh: "Sonic / MimicLite 全身运动跟踪", en: "Sonic / MimicLite Whole-Body Motion Tracking" },
+      img: "assets/img/projects/sonic.jpg",
+      video: "assets/videos/sonic.mp4",
+      tags: ["Humanoid", "Motion Tracking", "Teleoperation", "Sim-to-Real"],
+      desc: {
+        zh: "基于 Sonic 与 MimicLite 实现人形机器人全身运动跟踪：跑通 Sonic 真机部署链路；完成 lafan 数据重映射与 holomotion 适配并修复跳变；MimicLite 采用 TN 曲线硬约束与 reward 软约束两种方案训练。",
+        en: "Whole-body humanoid motion tracking via Sonic and MimicLite: established the Sonic real-robot deployment pipeline; completed lafan data remapping and holomotion adaptation, fixing remapping jitter; trained MimicLite with both TN-curve hard constraints and reward soft constraints."
       }
     },
     {
@@ -126,7 +137,21 @@ window.SITE_DATA = {
       }
     },
     {
-      title: { zh: "ROBOCON 轮式机器人抛踢橄榄球", en: "ROBOCON Wheeled Throwing & Kicking Robots" },
+      title: { zh: "全向移动视觉机械臂复合机器人 AMR", en: "Omnidirectional Vision-Guided Manipulator AMR" },
+      img: "assets/img/projects/midea-amr.jpg",
+      tags: ["ROS", "Manipulator", "B-spline", "PID"],
+      desc: {
+        zh: "在美的中央研究院负责 UR5 视觉机械臂复合机器人：正逆运动学解算与规划控制、三次 B 样条局部路径规划；采用速度环、位置环串级 PID 跟踪控制，实现“边夹取边移动”的协同控制。",
+        en: "At Midea CRC, developed a UR5 vision-manipulator AMR: forward/inverse kinematics, cubic B-spline local path planning, and cascaded velocity/position PID for simultaneous pick-and-move coordination."
+      }
+    }
+  ],
+
+  /* ================= 竞赛（与项目区分，单独展示） ================= */
+  competitions: [
+    {
+      year: "2020",
+      title: { zh: "全国大学生机器人大赛 ROBOCON", en: "ROBOCON National College Robot Competition" },
       img: "assets/img/projects/robocon.jpg",
       video: "assets/videos/robocon.mp4",
       tags: ["Embedded", "STM32", "PID", "Webots"],
@@ -136,12 +161,12 @@ window.SITE_DATA = {
       }
     },
     {
-      title: { zh: "全向移动视觉机械臂复合机器人 AMR", en: "Omnidirectional Vision-Guided Manipulator AMR" },
-      img: "assets/img/projects/midea-amr.jpg",
-      tags: ["ROS", "Manipulator", "B-spline", "PID"],
+      year: "2023",
+      title: { zh: "全国大学生机器人大赛 RoboMaster", en: "RoboMaster National College Robot Competition" },
+      tags: ["Robotics", "Embedded", "Competition"],
       desc: {
-        zh: "在美的中央研究院负责 UR5 视觉机械臂复合机器人：正逆运动学解算与规划控制、三次 B 样条局部路径规划；采用速度环、位置环串级 PID 跟踪控制，实现“边夹取边移动”的协同控制。",
-        en: "At Midea CRC, developed a UR5 vision-manipulator AMR: forward/inverse kinematics, cubic B-spline local path planning, and cascaded velocity/position PID for simultaneous pick-and-move coordination."
+        zh: "RoboMaster 机甲大师机器人对抗赛，获全国二等奖。",
+        en: "RoboMaster robot combat competition; won Second Prize nationally."
       }
     }
   ],

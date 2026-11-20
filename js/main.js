@@ -169,6 +169,38 @@
       '</section>';
   }
 
+  function competitionsHTML() {
+    var items = DATA.competitions || [];
+    if (!items.length) return '';
+    var cards = items.map(function (c) {
+      var thumb;
+      if (c.img) {
+        thumb = '<img class="project-thumb-img" loading="lazy" src="' + esc(c.img) + '" alt="">';
+      } else {
+        thumb = '<div class="project-thumb-fallback">' + icon('image', 34) + '</div>';
+      }
+      var tags = (c.tags || []).map(function (tag) {
+        return '<span class="tag">' + esc(tag) + '</span>';
+      }).join('');
+      var chips = (c.links || []).map(linkChip).join('');
+      var yearBadge = c.year ? '<span class="comp-year">' + esc(c.year) + '</span>' : '';
+      return '<article class="project-card comp-card">' +
+        '<div class="project-thumb">' + thumb + '</div>' +
+        '<div class="project-body">' +
+          '<h3 class="project-title">' + yearBadge + esc(t(c.title)) + '</h3>' +
+          (tags ? '<div class="project-tags">' + tags + '</div>' : '') +
+          (c.desc ? '<p class="project-desc">' + esc(t(c.desc)) + '</p>' : '') +
+          (c.video ? '<video class="project-video" controls muted playsinline preload="metadata"' + (c.img ? ' poster="' + esc(c.img) + '"' : '') + ' src="' + esc(c.video) + '"></video>' : '') +
+          (chips ? '<div class="project-links">' + chips + '</div>' : '') +
+        '</div>' +
+      '</article>';
+    }).join('');
+    return '<section class="section" id="competitions">' +
+      '<h2>\u{1F3C6} ' + (lang === 'zh' ? '竞赛' : 'Competitions') + '</h2>' +
+      '<div class="projects-grid">' + cards + '</div>' +
+      '</section>';
+  }
+
   function experienceHTML() {
     var items = DATA.experience || [];
     if (!items.length) return '';
@@ -238,7 +270,7 @@
       }
     }
 
-    APP.innerHTML = profileHTML() + newsHTML() + projectsHTML() + experienceHTML() + honorsHTML() + publicationsHTML();
+    APP.innerHTML = profileHTML() + newsHTML() + projectsHTML() + competitionsHTML() + experienceHTML() + honorsHTML() + publicationsHTML();
   }
 
   LANG_BTN.addEventListener('click', function () {
