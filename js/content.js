@@ -98,6 +98,7 @@ window.SITE_DATA = {
     {
       title: { zh: "Sonic / MimicLite 全身运动跟踪", en: "Sonic / MimicLite Whole-Body Motion Tracking" },
       img: "assets/img/projects/sonic.jpg",
+      diagram: "assets/img/projects/diagram-sonic.svg",
       video: "assets/videos/sonic.mp4",
       tags: ["Humanoid", "Motion Tracking", "Teleoperation", "Sim-to-Real"],
       desc: {
@@ -105,27 +106,33 @@ window.SITE_DATA = {
         en: "Whole-body humanoid motion tracking via Sonic and MimicLite: established the Sonic real-robot deployment pipeline; completed lafan data remapping and holomotion adaptation, fixing remapping jitter; trained MimicLite with both TN-curve hard constraints and reward soft constraints."
       }
     },
+  ],
+
+  /* ================= 实习经历（与项目区分，单独展示） ================= */
+  internships: [
     {
       title: { zh: "人形机器人遥操作与步态优化", en: "Humanoid Robot Teleoperation & Gait Optimization" },
+      org: { zh: "小鹏汽车 · 机器人中心", en: "XPeng Robotics" },
       img: "assets/img/projects/humanoid-xpeng.jpg",
       video: "assets/videos/xpeng.mp4",
       tags: ["Humanoid", "MuJoCo", "Teleoperation", "Gait Planning"],
       desc: {
-        zh: "在小鹏汽车独立负责 VR 遥操作控制 PX5 人形机器人行走：通讯系统方案设计、MuJoCo 仿真验证、系统状态机与实机调试；基于贝塞尔曲线完成步态规划与 smart gait 模式切换，实现直膝行走实机调优，并完成电机执行器性能摸底与 PVT 控制器参数整定。技术栈：WBC、IQP、LQR、MPC、C/C++，实习绩效考评优秀。",
-        en: "At XPeng, independently led VR teleoperation of the PX5 humanoid: communication architecture, MuJoCo simulation, state machine, and hardware tuning. Planned gaits with Bézier curves, implemented smart-gait switching and straight-knee walking, and performed motor-actuator characterization with PVT controller tuning. Stack: WBC, IQP, LQR, MPC, C/C++; rated \"excellent\" in the internship performance review."
+        zh: "独立负责 VR 遥操作控制 PX5 人形机器人行走：通讯系统方案设计、MuJoCo 仿真验证、系统状态机与实机调试；基于贝塞尔曲线完成步态规划与 smart gait 模式切换，实现直膝行走实机调优，并完成电机执行器性能摸底与 PVT 控制器参数整定。技术栈：WBC、IQP、LQR、MPC、C/C++，实习绩效考评优秀。",
+        en: "Independently led VR teleoperation of the PX5 humanoid: communication architecture, MuJoCo simulation, state machine, and hardware tuning. Planned gaits with Bézier curves, implemented smart-gait switching and straight-knee walking, and performed motor-actuator characterization with PVT controller tuning. Stack: WBC, IQP, LQR, MPC, C/C++; rated \"excellent\" in the internship performance review."
       }
     },
     {
       title: { zh: "车载自动驾驶正向开发（A-SPICE）", en: "Automotive Forward Development (A-SPICE)" },
+      org: { zh: "大疆创新 · 车载自动驾驶", en: "DJI Automotive" },
       img: "assets/img/projects/dji.jpg",
       diagram: "assets/img/projects/diagram-aspice.png",
       video: "assets/videos/dji.mp4",
       tags: ["AUTOSAR", "A-SPICE", "CAN", "Embedded"],
       desc: {
-        zh: "大疆创新车载自动驾驶实习：基于 A-SPICE 的正向开发，完成代码静态检查与 Coverity 扫描修复、Cantata 单元测试、gdb 集成调试；AUTOSAR 嵌入式开发与 CAN 通讯验证；车辆执行器性能摸底与开环验收。",
-        en: "DJI Automotive internship: A-SPICE forward development including static code checks, Coverity remediation, Cantata unit tests, and gdb integration debugging; AUTOSAR embedded development and CAN communication validation; vehicle actuator characterization and open-loop acceptance."
+        zh: "基于 A-SPICE 的正向开发：代码静态检查与 Coverity 扫描修复、Cantata 单元测试、gdb 集成调试；AUTOSAR 嵌入式开发与 CAN 通讯验证；车辆执行器性能摸底与开环验收。",
+        en: "A-SPICE forward development including static code checks, Coverity remediation, Cantata unit tests, and gdb integration debugging; AUTOSAR embedded development and CAN communication validation; vehicle actuator characterization and open-loop acceptance."
       }
-    },
+    }
   ],
 
   /* ================= 竞赛（与项目区分，单独展示） ================= */

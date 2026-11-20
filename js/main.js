@@ -169,6 +169,40 @@
       '</section>';
   }
 
+  function internshipsHTML() {
+    var items = DATA.internships || [];
+    if (!items.length) return '';
+    var cards = items.map(function (c) {
+      var thumb;
+      if (c.img) {
+        thumb = '<img class="project-thumb-img" loading="lazy" src="' + esc(c.img) + '" alt="">';
+      } else {
+        thumb = '<div class="project-thumb-fallback">' + icon('image', 34) + '</div>';
+      }
+      var tags = (c.tags || []).map(function (tag) {
+        return '<span class="tag">' + esc(tag) + '</span>';
+      }).join('');
+      var chips = (c.links || []).map(linkChip).join('');
+      var orgBadge = c.org ? '<span class="comp-year">' + esc(t(c.org)) + '</span>' : '';
+      return '<article class="project-card intern-card">' +
+        '<div class="project-thumb">' + thumb + '</div>' +
+        '<div class="project-body">' +
+          '<h3 class="project-title">' + esc(t(c.title)) + '</h3>' +
+          (orgBadge ? '<div class="intern-org">' + orgBadge + '</div>' : '') +
+          (tags ? '<div class="project-tags">' + tags + '</div>' : '') +
+          (c.desc ? '<p class="project-desc">' + esc(t(c.desc)) + '</p>' : '') +
+          (c.video ? '<video class="project-video" controls muted playsinline preload="metadata"' + (c.img ? ' poster="' + esc(c.img) + '"' : '') + ' src="' + esc(c.video) + '"></video>' : '') +
+          (c.diagram ? '<figure class="project-figure"><a href="' + esc(c.diagram) + '" target="_blank" rel="noopener" title="' + (lang === 'zh' ? '点击查看大图' : 'Click to enlarge') + '"><img class="project-diagram" loading="lazy" src="' + esc(c.diagram) + '" alt="' + esc(t(c.title)) + '"></a><figcaption>' + (lang === 'zh' ? '算法框图' : 'Network Architecture') + '</figcaption></figure>' : '') +
+          (chips ? '<div class="project-links">' + chips + '</div>' : '') +
+        '</div>' +
+      '</article>';
+    }).join('');
+    return '<section class="section" id="internships">' +
+      '<h2>\u{1F4BC} ' + (lang === 'zh' ? '实习经历' : 'Internships') + '</h2>' +
+      '<div class="projects-grid">' + cards + '</div>' +
+      '</section>';
+  }
+
   function competitionsHTML() {
     var items = DATA.competitions || [];
     if (!items.length) return '';
@@ -270,7 +304,7 @@
       }
     }
 
-    APP.innerHTML = profileHTML() + newsHTML() + projectsHTML() + competitionsHTML() + experienceHTML() + honorsHTML() + publicationsHTML();
+    APP.innerHTML = profileHTML() + newsHTML() + projectsHTML() + internshipsHTML() + competitionsHTML() + experienceHTML() + honorsHTML() + publicationsHTML();
   }
 
   LANG_BTN.addEventListener('click', function () {
