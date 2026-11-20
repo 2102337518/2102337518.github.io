@@ -106,7 +106,9 @@
         icon(l.icon, 18) + '<span>' + esc(t(l.label)) + '</span></a>';
     }).join('');
     var cv = p.cv ? '<a class="btn-cv" href="' + esc(p.cv) + '" target="_blank" rel="noopener">' +
-      icon('file', 15) + '<span>' + (lang === 'zh' ? '简历 / CV' : 'CV / Résumé') + '</span></a>' : '';
+      icon('file', 15) + '<span>' + (lang === 'zh' ? '中文简历' : 'CV') + '</span></a>' : '';
+    var cvEn = p.cv_en ? '<a class="btn-cv" href="' + esc(p.cv_en) + '" target="_blank" rel="noopener">' +
+      icon('file', 15) + '<span>' + (lang === 'zh' ? '英文简历' : 'English CV') + '</span></a>' : '';
 
     return '' +
       '<section class="section profile" id="about">' +
@@ -117,7 +119,7 @@
           (p.affiliation ? '<p class="affiliation">' + esc(t(p.affiliation)) + '</p>' : '') +
           (p.bio ? '<p class="bio">' + esc(t(p.bio)) + '</p>' : '') +
           '<div class="social-row">' + links + '</div>' +
-          cv +
+          '<div class="cv-row">' + cv + cvEn + '</div>' +
         '</div>' +
       '</section>';
   }

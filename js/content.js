@@ -35,6 +35,7 @@ window.SITE_DATA = {
 
     /* 简历 PDF（由 cv-generator 工具生成） */
     cv: "assets/cv/林镇标-个人简历.pdf",
+    cv_en: "assets/cv/林镇标-个人简历-EN.pdf",
 
     /* 社交链接：icon 可选值 github / email / scholar / linkedin / x / bilibili / zhihu / youtube / homepage
        不需要的整行删掉即可 */
