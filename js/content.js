@@ -114,8 +114,20 @@ window.SITE_DATA = {
       }
     },
     {
+      title: { zh: "车载自动驾驶正向开发（A-SPICE）", en: "Automotive Forward Development (A-SPICE)" },
+      img: "assets/img/projects/dji.jpg",
+      diagram: "assets/img/projects/diagram-aspice.png",
+      video: "assets/videos/dji.mp4",
+      tags: ["AUTOSAR", "A-SPICE", "CAN", "Embedded"],
+      desc: {
+        zh: "大疆创新车载自动驾驶实习：基于 A-SPICE 的正向开发，完成代码静态检查与 Coverity 扫描修复、Cantata 单元测试、gdb 集成调试；AUTOSAR 嵌入式开发与 CAN 通讯验证；车辆执行器性能摸底与开环验收。",
+        en: "DJI Automotive internship: A-SPICE forward development including static code checks, Coverity remediation, Cantata unit tests, and gdb integration debugging; AUTOSAR embedded development and CAN communication validation; vehicle actuator characterization and open-loop acceptance."
+      }
+    },
+    {
       title: { zh: "ROBOCON 轮式机器人抛踢橄榄球", en: "ROBOCON Wheeled Throwing & Kicking Robots" },
-      img: "assets/img/projects/project5.svg",
+      img: "assets/img/projects/robocon.jpg",
+      video: "assets/videos/robocon.mp4",
       tags: ["Embedded", "STM32", "PID", "Webots"],
       desc: {
         zh: "担任电控组组长，带领团队完成两台轮式移动机器人自主抛踢橄榄球：STM32F4 主控开发与多传感器融合、正交码盘+陀螺仪全场定位、基于 Webots 的四阶贝塞尔曲线轨迹优化，获全国一等奖（全国季军），并代表中国参加亚太 ABU Robocon 国际交流赛。",
@@ -124,7 +136,7 @@ window.SITE_DATA = {
     },
     {
       title: { zh: "全向移动视觉机械臂复合机器人 AMR", en: "Omnidirectional Vision-Guided Manipulator AMR" },
-      img: "assets/img/projects/project6.svg",
+      img: "assets/img/projects/midea-amr.jpg",
       tags: ["ROS", "Manipulator", "B-spline", "PID"],
       desc: {
         zh: "在美的中央研究院负责 UR5 视觉机械臂复合机器人：正逆运动学解算与规划控制、三次 B 样条局部路径规划；采用速度环、位置环串级 PID 跟踪控制，实现“边夹取边移动”的协同控制。",
