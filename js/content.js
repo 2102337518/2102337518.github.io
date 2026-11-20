@@ -125,7 +125,6 @@ window.SITE_DATA = {
       title: { zh: "车载自动驾驶正向开发（A-SPICE）", en: "Automotive Forward Development (A-SPICE)" },
       org: { zh: "大疆创新 · 车载自动驾驶", en: "DJI Automotive" },
       img: "assets/img/projects/dji.jpg",
-      diagram: "assets/img/projects/diagram-aspice.png",
       video: "assets/videos/dji.mp4",
       tags: ["AUTOSAR", "A-SPICE", "CAN", "Embedded"],
       desc: {
