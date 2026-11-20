@@ -84,13 +84,13 @@ window.SITE_DATA = {
       }
     },
     {
-      title: { zh: "自研人形机器人行走运控", en: "In-house Humanoid Locomotion Control" },
+      title: { zh: "自研人形机器人走跑一体运控", en: "In-house Humanoid Walk-Run Locomotion Control" },
       img: "assets/img/projects/humanoid.jpg",
       video: "assets/videos/humanoid.mp4",
       tags: ["Humanoid", "23-DOF", "Reinforcement Learning", "Locomotion"],
       desc: {
-        zh: "从 0 到 1 训练一版 23DOF 人形机器人全向行走策略；完成腰部并联关节的运动学解算验证，整定 Kp/Kd 参数，实现人形机器人全向基础行走。",
-        en: "Trained a 23-DOF humanoid omnidirectional locomotion policy from scratch; verified the kinematics of the waist parallel joint and tuned Kp/Kd gains to achieve stable omnidirectional walking."
+        zh: "从 0 到 1 训练 23DOF 人形机器人走跑一体运控策略，实现平稳行走与奔跑的连续切换；完成腰部并联关节运动学解算验证与 Kp/Kd 参数整定，在真机上实现走跑一体的稳定运动。",
+        en: "Trained a 23-DOF humanoid walk-run locomotion policy from scratch, enabling smooth transitions between walking and running; verified waist-parallel-joint kinematics and tuned Kp/Kd gains for stable real-robot walk-run locomotion."
       }
     },
     {
