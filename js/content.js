@@ -88,10 +88,10 @@ window.SITE_DATA = {
       title: { zh: "自研人形机器人走跑一体运控", en: "In-house Humanoid Walk-Run Locomotion Control" },
       img: "assets/img/projects/humanoid.jpg",
       video: "assets/videos/humanoid.mp4",
-      tags: ["Humanoid", "23-DOF", "Reinforcement Learning", "Locomotion"],
+      tags: ["Humanoid", "23-DOF", "PPO", "Isaac Lab", "Locomotion"],
       desc: {
-        zh: "从 0 到 1 训练 23DOF 人形机器人走跑一体运控策略，实现平稳行走与奔跑的连续切换；完成腰部并联关节运动学解算验证与 Kp/Kd 参数整定，在真机上实现走跑一体的稳定运动。",
-        en: "Trained a 23-DOF humanoid walk-run locomotion policy from scratch, enabling smooth transitions between walking and running; verified waist-parallel-joint kinematics and tuned Kp/Kd gains for stable real-robot walk-run locomotion."
+        zh: "在 Isaac Lab/Gym 中基于 PPO 分别训练 23DOF 人形机器人的行走与跑步策略，实现走跑一体的连续切换与全向运动；训练中引入腰部运动幅度惩罚并调整原地旋转奖励，完成真机部署验证。",
+        en: "Trained 23-DOF humanoid walking and running policies with PPO in Isaac Lab/Gym, enabling smooth walk-run transitions and omnidirectional locomotion; introduced waist-motion-amplitude penalties and tuned in-place rotation rewards, with real-robot deployment."
       }
     },
     {
