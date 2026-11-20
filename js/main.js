@@ -155,6 +155,8 @@
           '<h3 class="project-title">' + esc(t(pr.title)) + '</h3>' +
           (tags ? '<div class="project-tags">' + tags + '</div>' : '') +
           (pr.desc ? '<p class="project-desc">' + esc(t(pr.desc)) + '</p>' : '') +
+          (pr.video ? '<video class="project-video" controls muted playsinline preload="metadata"' + (pr.img ? ' poster="' + esc(pr.img) + '"' : '') + ' src="' + esc(pr.video) + '"></video>' : '') +
+          (pr.diagram ? '<figure class="project-figure"><a href="' + esc(pr.diagram) + '" target="_blank" rel="noopener" title="' + (lang === 'zh' ? '点击查看大图' : 'Click to enlarge') + '"><img class="project-diagram" loading="lazy" src="' + esc(pr.diagram) + '" alt="' + esc(t(pr.title)) + '"></a><figcaption>' + (lang === 'zh' ? '算法框图' : 'Network Architecture') + '</figcaption></figure>' : '') +
           (chips ? '<div class="project-links">' + chips + '</div>' : '') +
         '</div>' +
       '</article>';

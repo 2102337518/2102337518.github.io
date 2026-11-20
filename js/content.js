@@ -53,8 +53,9 @@ window.SITE_DATA = {
    * 每个项目字段：
    *   title      项目名（双语）
    *   desc       一两句话介绍（双语）
-   *   img        项目截图/演示图，建议 16:9；当前为标题占位图，
-   *              有了实拍图/GIF 后放到 assets/img/projects/ 并替换路径
+   *   img        项目卡片图（16:9 截图/实拍）
+   *   diagram    算法框图（可选，放在介绍下方，可点击放大）
+   *   video      演示视频 mp4（可选，放在介绍下方，点击播放）
    *   tags       技术标签数组
    *   links      链接数组（github / code / file / external / homepage），
    *              url 留空 "" 该按钮不显示；暂无链接可整组省略
@@ -62,7 +63,9 @@ window.SITE_DATA = {
   projects: [
     {
       title: { zh: "基于注意力机制的感知运控四足机器人", en: "Attention-based Perceptive Locomotion for Quadruped Robots" },
-      img: "assets/img/projects/project1.svg",
+      img: "assets/img/projects/project1.jpg",
+      diagram: "assets/img/projects/diagram-attention.png",
+      video: "assets/videos/quadruped.mp4",
       tags: ["Reinforcement Learning", "Attention", "GRU", "Unitree GO2"],
       desc: {
         zh: "在 Actor 网络中引入多头注意力机制，将 CNN 提取的深度视觉特征（Key/Value）与本体感知特征（Query）深度融合，串联 GRU 处理动态时序；定向设计落足点奖励与 AMP 行走步态，实现 GO2 稳定穿越梅花桩的全地形行走实机部署。",
@@ -71,11 +74,23 @@ window.SITE_DATA = {
     },
     {
       title: { zh: "自研轮足机器人全地形越障（量产落地）", en: "In-house Wheel-legged Robot: All-terrain Obstacle Crossing" },
-      img: "assets/img/projects/project2.svg",
+      img: "assets/img/projects/project2.jpg",
+      diagram: "assets/img/projects/diagram-actorcritic.png",
+      video: "assets/videos/wheelleg.mp4",
       tags: ["Isaac Lab", "DreamWaQ", "VAE", "Locomotion"],
       desc: {
         zh: "将 DreamWaQ 算法移植至 Isaac Lab 仿真环境并加入 VAE 负载估计模块，完成达到机器人自身体重的负载实机测试；从 0 到 1 完成自研轮足机器人算法实现与落地，训练自研 Policy，实现爬楼梯、高台等多模态运动策略的稳定输出。",
         en: "Ported DreamWaQ to Isaac Lab with a VAE payload-estimation module, passing full-body-weight payload tests on hardware. Delivered the wheel-legged robot's algorithm stack from scratch, training policies for stable multi-modal locomotion including stair climbing and platform ascent."
+      }
+    },
+    {
+      title: { zh: "自研人形机器人行走运控", en: "In-house Humanoid Locomotion Control" },
+      img: "assets/img/projects/humanoid.jpg",
+      video: "assets/videos/humanoid.mp4",
+      tags: ["Humanoid", "23-DOF", "Reinforcement Learning", "Locomotion"],
+      desc: {
+        zh: "从 0 到 1 训练一版 23DOF 人形机器人全向行走策略；完成腰部并联关节的运动学解算验证，整定 Kp/Kd 参数，实现人形机器人全向基础行走。",
+        en: "Trained a 23-DOF humanoid omnidirectional locomotion policy from scratch; verified the kinematics of the waist parallel joint and tuned Kp/Kd gains to achieve stable omnidirectional walking."
       }
     },
     {

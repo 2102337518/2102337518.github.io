@@ -332,6 +332,32 @@ main { padding: 44px 0 20px; }
   flex: 1;
 }
 
+.project-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.project-figure {
+  margin: 4px 0 14px;
+  text-align: center;
+}
+.project-diagram {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;   /* 算法框图是白底线条图，深浅色模式下都保持白底保证文字清晰 */
+}
+.project-figure figcaption {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
 .project-links, .pub-links {
   display: flex;
   flex-wrap: wrap;
